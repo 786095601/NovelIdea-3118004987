@@ -29,11 +29,11 @@ template <typename Datatype>
 void CircleQueue<Datatype>::push(){
 	Datatype x;
 	cin>>x;
-	if((tail+1)%MAX==head)               //ÅĞ¶Ï¶ÓÁĞÊÇ·ñÒÑÂú
-	cout<<"¶ÓÁĞÒÑÂú"<<endl;
+	if((tail+1)%MAX==head)               //åˆ¤æ–­é˜Ÿåˆ—æ˜¯å¦å·²æ»¡
+	cout<<"é˜Ÿåˆ—å·²æ»¡"<<endl;
 	else
 	{
-		tail=(tail+1)%MAX;                //ÒÆ¶¯Î²Ö¸ÕëÖ¸ÏòÏÂÒ»¸ö¿Õ¼ä
+		tail=(tail+1)%MAX;                //ç§»åŠ¨ä¼ªæŒ‡é’ˆæŒ‡å‘ä¸‹ä¸€ä¸ªç©ºé—´
 		data[tail]=x;
 		cout<<data[tail]<<endl;  
     }
@@ -41,36 +41,36 @@ void CircleQueue<Datatype>::push(){
 
 template <typename Datatype>
 void CircleQueue<Datatype>::pull(){
-	if(empty())                            //ÅĞ¶Ï¶ÓÁĞÊÇ·ñÎª¿Õ
-		cout<<"¶ÓÁĞÒÑ¿Õ"<<endl;
+	if(empty())                            //åˆ¤æ–­é˜Ÿåˆ—æ˜¯å¦ä¸ºç©º
+		cout<<"é˜Ÿåˆ—å·²ç©º"<<endl;
 	else
 	{
-		head=(head+1)%MAX;                //ÒÆ¶¯¶ÓÍ·Ö¸ÕëÖ¸ÏòÏÂÒ»¸ö¿Õ¼ä£¬¼´±»É¾ÔªËØËùÔÚÎ»ÖÃ
+		head=(head+1)%MAX;                //ç§»åŠ¨ä¼ªæŒ‡é’ˆæŒ‡å‘ä¸‹ä¸€ç©ºé—´
 		cout<<data[head]<<endl;
 }
 }
 
 int main(){
-	CircleQueue<int> test;
+	CircleQueue<int> test;                       //intå¯æ¢å…¶ä»–ç±»å‹
 	int k;
-	cout<<"ÇëÊäÈëÈë¶ÓÔªËØ¸öÊı£º"<<endl;
-	cin>>k;
+	cout<<"è¯·è¾“å…¥å…¥é˜Ÿå…ƒç´ ä¸ªæ•°ï¼š"<<endl;
+	cin>>k;                                     //è®¾ä¸º5
 	if(k<=20)
 	{
-	 cout<<"ÇëÊäÈëÈë¶ÓÔªËØ£º"<<endl; 
+	 cout<<"è¯·è¾“å…¥å…¥é˜Ÿå…ƒç´ ï¼š"<<endl;              //1 2 3 4 5,a b c d f ,1.1 2.2 3.3 4.4 5.5
 	 for(int i=0;i<k;i++)
 	 {
 	   test.push();
      }
-     cout<<"¿ªÊ¼³ö¶Ó£º"<<endl;
+     cout<<"å¼€å§‹å‡ºé˜Ÿï¼š"<<endl;
       for(int j=0;j<k;j++)
       {
      	test.pull();
       }
-      cout<<"³ö¶ÓÍê³É"<<endl;
+      cout<<"å‡ºé˜Ÿå®Œæˆ"<<endl;
 	}
 	else 
-	cout<<"ÇëÊäÈëĞ¡ÓÚ"<<MAX<<"µÄÕûÊı"<<endl; 
+	cout<<"è¯·è¾“å…¥å°äº"<<MAX<<"çš„æ•´æ•°"<<endl; 
 
 }
 
