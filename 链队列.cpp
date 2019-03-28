@@ -14,9 +14,9 @@ class LinkQueue{
 	public :
 	  LinkQueue(); 
 	  ~LinkQueue();
-	  bool noempty();            //²»ÊÇ¿Õ½Úµã 
-	  void push();	            //Èë¶Ó
-	  void pull();      	    //³ö¶Ó		
+	  bool noempty();            //ä¸æ˜¯ç©ºèŠ‚ç‚¹ 
+	  void push();	            //å…¥é˜Ÿ
+	  void pull();      	    //å‡ºé˜Ÿ		
 }; 
 
 template <typename Datatype>                              
@@ -34,7 +34,7 @@ template <typename Datatype>
         p=head;
         head=head->next;
         delete p;
-        cout<<"¶ÓÁĞÒÑ¾­Ïú»Ù"; 
+        cout<<"é˜Ÿåˆ—å·²ç»é”€æ¯"; 
       }	 
 }
 
@@ -55,7 +55,7 @@ template <typename Datatype>
      	cout<<d<<endl;
 }
 
-template <typename Datatype>                                //ÓĞÎÊÌâ£¨ÔİÊ±£© 
+template <typename Datatype>                                
      void LinkQueue<Datatype>::pull(){
      if(noempty())
 	 {
@@ -68,23 +68,23 @@ template <typename Datatype>                                //ÓĞÎÊÌâ£¨ÔİÊ±£©
 }
 
 int main(){
-	LinkQueue<double> test;
+	LinkQueue<double> test;                    //å¯æ¢å…¶ä»–ç±»å‹
 	int i,j;
-	cout<<"ÇëÊä¶ÓÁĞ³¤¶È£º"<<endl;
-	cin>>i;
+	cout<<"è¯·è¾“é˜Ÿåˆ—é•¿åº¦ï¼š"<<endl;
+	cin>>i;                                    //è®¾ä¸º5
 	j=i;
-	cout<<"ÇëÊäÈë¶ÓÁĞÔªËØ£º"<<endl; 
+	cout<<"è¯·è¾“å…¥é˜Ÿåˆ—å…ƒç´ ï¼š"<<endl; 
 	while(i--)
 		{
-	     test.push(); 
+	     test.push();                         //1.1 2.2 3.3 4.4 5.5 ....
 		} 
-	cout<<"Èë¶ÓÍê³É"<<endl;
-	cout<<"¿ªÊ¼³ö¶Ó"<<endl; 
+	cout<<"å…¥é˜Ÿå®Œæˆ"<<endl;
+	cout<<"å¼€å§‹å‡ºé˜Ÿ"<<endl; 
 		while(j--)
 		{
-			test.pull();
+			test.pull();             
 	    }
-	cout<<"³ö¶ÓÍê³É"<<endl;
+	cout<<"å‡ºé˜Ÿå®Œæˆ"<<endl;
 }
 
 
