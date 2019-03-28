@@ -41,7 +41,7 @@ void CircleQueue<Datatype>::push(){
 
 template <typename Datatype>
 void CircleQueue<Datatype>::pull(){
-	if(empty())                            //判断队列是否为空
+	if(empty())                              //判断队列是否为空
 		cout<<"队列已空"<<endl;
 	else
 	{
