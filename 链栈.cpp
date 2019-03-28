@@ -14,8 +14,8 @@ class Linkstack{
     linkstack *top;
     public :
      Linkstack(){this->top=NULL;};             
-	 ~Linkstack(){};		         //构析函数   程序结束时销毁构造函数内数据  
-     void push();                   //压栈
+	 ~Linkstack(){};		 //构析函数   程序结束时销毁构造函数内数据  
+     void push();                        //压栈
 	 void pull();                    //出栈
 	 bool empty();
 };
