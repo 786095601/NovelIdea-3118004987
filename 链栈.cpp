@@ -14,10 +14,9 @@ class Linkstack{
     linkstack *top;
     public :
      Linkstack(){this->top=NULL;};             
-	 ~Linkstack(){};		         //¹¹Îöº¯Êı   ³ÌĞò½áÊøÊ±Ïú»Ù¹¹Ôìº¯ÊıÄÚÊı¾İ 
-     void create();                 //´´½¨Õ» 
-     void push();                   //Ñ¹Õ»
-	 void pull();                    //³öÕ»
+	 ~Linkstack(){};		         //æ„æå‡½æ•°   ç¨‹åºç»“æŸæ—¶é”€æ¯æ„é€ å‡½æ•°å†…æ•°æ®  
+     void push();                   //å‹æ ˆ
+	 void pull();                    //å‡ºæ ˆ
 	 bool empty();
 };
     
@@ -42,10 +41,10 @@ class Linkstack{
      	cout<<d<<endl;
      }
      
-    template <typename Datatype>                                    //ÓĞÎÊÌâ(ÔİÊ±)
+    template <typename Datatype>                                    //æœ‰é—®é¢˜(æš‚æ—¶)
      void Linkstack<Datatype>::pull(){
     	if(empty())
-		throw"Õ»ÒÑ¿Õ";
+		throw"æ ˆå·²ç©º";
 		Datatype d=this->top->data;
     	linkstack *now=this->top;
     	this->top=this->top->next;
@@ -55,21 +54,21 @@ class Linkstack{
     
     int main(){
     	int i,k;
-    	Linkstack<int> test;           //int¿ÉÒÔ»»float double char...
-    	cout<<"ÊäÈëÁ´Õ»µÄ³¤¶È£º"<<endl;                
-    	cin>>i;                                           //³¤¶ÈÎªÈÎÒâintĞÍ¿É´ïµ½µÄ³¤¶È   ²âÊÔÓÃ5 
+    	Linkstack<int> test;           //intå¯ä»¥æ¢float double char...
+    	cout<<"è¾“å…¥é“¾æ ˆçš„é•¿åº¦ï¼š"<<endl;                
+    	cin>>i;                                           //é•¿åº¦ä¸ºä»»æ„intå‹å¯è¾¾åˆ°çš„é•¿åº¦   æµ‹è¯•ç”¨5 
     	k=i;
-    	cout<<"ÇëÊäÈëÕ»ÔªËØ£º"<<endl;                     //²âÊÔÓÃÀı  1 5 9 3 6 or  a s d f g or 1.1 2.2 3.3 4.4 5.5 
+    	cout<<"è¯·è¾“å…¥æ ˆå…ƒç´ ï¼š"<<endl;                     //æµ‹è¯•ç”¨ä¾‹  1 5 9 3 6 or  a s d f g or 1.1 2.2 3.3 4.4 5.5 
     	while(i--)
 		{
 	      test.push(); 
 		} 
-        cout<<"¿ªÊ¼³öÕ»"<<endl; 
+        cout<<"å¼€å§‹å‡ºæ ˆ"<<endl; 
 		while(k--)
 		{
 			test.pull();
 	    }
-		cout<<"³öÕ»³É¹¦!"<<endl;
+		cout<<"å‡ºæ ˆæˆåŠŸ!"<<endl;
     }
     
     
