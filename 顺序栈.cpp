@@ -10,7 +10,7 @@ class SeqStack{
 		Datatype data[StackSize];
     public :
     	SeqStack(){top=-1;};
-    	~SeqStack(){};                        //¹¹Îöº¯ÊıÇå³ıtopÊı¾İ 
+    	~SeqStack(){};                        //æ„æå‡½æ•°æ¸…é™¤topæ•°æ® 
     	void push(Datatype x);
     	Datatype pull();
     	bool empty();
@@ -19,14 +19,14 @@ class SeqStack{
 		
     template <typename Datatype>
 	void SeqStack<Datatype>::push(Datatype x){
-		if(top==StackSize-1) throw"ÂúÕ»";
+		if(top==StackSize-1) throw"æ»¡æ ˆ";
 		cin>>x;
 		data[++top]=x; 
 	}  
 	
 	template <typename Datatype>
 	Datatype SeqStack<Datatype>::pull(){
-		if(top==-1) throw "¿ÕÕ»";
+		if(top==-1) throw "ç©ºæ ˆ";
 		Datatype x=data[top--];
 		cout<<x;
 		return x; 
@@ -42,7 +42,7 @@ class SeqStack{
 	
 	template <typename Datatype>
 	void SeqStack<Datatype>:: printlist(){
-		if(empty())throw"µ½µ×ÁË"; 
+		if(empty())throw"åˆ°åº•äº†"; 
 		 for (int i=0; i<=top; i++)
 		 {
 		   cout<<data[i]<<endl;
@@ -51,23 +51,23 @@ class SeqStack{
 	
 
 	int main(){     
-	int n;                                    //double¿ÉÒÔ¸Ä³ÉÈÎÒâÀàĞÍ (char int float...) 
-	 SeqStack<int> test;    //²âÊÔÓÃÀı£º0.0 1.1 2.2 3.3 4.4 5.5 6.6 7.7 8.8 9.9...  a b c d e f g.... 
-	 cout<<"ÊäÈëÕ»³¤¶È"<<endl;
+	int n;                                    //doubleå¯ä»¥æ”¹æˆä»»æ„ç±»å‹
+	 SeqStack<int> test;                  //æµ‹è¯•ç”¨ä¾‹ï¼š1 2 3 4 5...  a b c d e f g.... 
+	 cout<<"è¾“å…¥æ ˆé•¿åº¦"<<endl;
 	 cin>>n;
-	 cout<<"ÊäÈëÕ»ÄÚÔªËØ£º"<<endl;
+	 cout<<"è¾“å…¥æ ˆå†…å…ƒç´ ï¼š"<<endl;
 	 for (int i=0; i<n;i++) {
         test.push(i);
     }
-    cout<<"ÏÔÊ¾Õ»ÄÚÔªËØ£º" <<endl;
+    cout<<"æ˜¾ç¤ºæ ˆå†…å…ƒç´ ï¼š" <<endl;
     test.printlist();
-    cout<<"³öÕ»²âÊÔ£º"<<endl; 
+    cout<<"å‡ºæ ˆæµ‹è¯•ï¼š"<<endl; 
     for(int j=0;j<n;j++)
 	{
       test.pull();
       cout<<endl;
     }
-    cout<<"³öÕ»³É¹¦£¡"<<endl;
+    cout<<"å‡ºæ ˆæˆåŠŸï¼"<<endl;
     
 }
 	
